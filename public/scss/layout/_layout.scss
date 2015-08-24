@@ -7,8 +7,10 @@
 
 section {
 	max-width: 800px;
-	width: 90%;
+	// width: 90%;
 	margin: 0 auto;
+
+	@include clearfix;
 }
 
 .lede {
@@ -24,12 +26,13 @@ section {
 }
 
 .lede-content {
-	// position: absolute;
-	z-index: 1;
+	position: absolute;
+	z-index: 2;
 	top: 10%;
 	width: 90%;
 	max-width: 800px;
 	margin: -300px auto 0;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -59,9 +62,113 @@ section {
 
 .dropcap {
 	// initial-letter: 3;
-	font-family: $NHaas;
-	font-size: 5.75em;
-	line-height: 0.9em;
+	font: 5.75em/0.9em $NHaas;
 	float: left;
 	margin-right: 0.04em;
+}
+
+
+.wrapper_images {
+	font-family: $NHaas;
+	text-align: center;
+	background-color: rgba(0,0,0, 0.05);
+	// width: 90%;
+	padding: 1% 5% 5%;
+	margin: 0 auto 2em;
+}
+
+.box_text {
+	@include thick-border;
+	padding: 1em 0.5em 0;
+	margin: 1em 0 2em;
+
+	h3 {
+		font-size: 1.5rem;
+		display: inline-block;
+	}
+
+	p {
+		font-size: 1rem;
+		font-family: $tiempos;
+	}
+}
+
+.box_clothes {
+	@include clearfix;
+	margin-bottom: 2em;
+
+	header {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 32%;
+			height: 4px;
+			width: 100%;
+			background-color: $black;
+			z-index: -1;
+		}
+	}
+
+	h3 {
+		font-size: 1rem;
+		@include NHaas-bold;
+		@include thick-border;
+		padding: 0.1em 0.5em;
+		position: relative;
+		display: inline-block;
+		background-color: $white;
+	}
+
+	p {
+		margin: 0.5em 0;
+		font-size: 0.9rem;
+		line-height: 1.1rem;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.box_image_left, .box_image_right {
+	width: 48%;
+}
+
+.box_image_left {
+	float: left;
+}
+
+.box_image_right {
+	float: right;
+}
+
+.label {
+	font-size: 0.9rem;
+	@include NHaas-bold;
+	@include thick-border;
+	padding: 0.2em 0.5em;
+	display: inline-block;
+}
+
+/*------------  SIDEBAR ------------*/
+
+.sidebar_clothing_annotation {
+	// font-size: 0.8em;
+	// line-height: 1.5em;
+
+	// color: $medium-gray;
+
+	display: none;
+
+
+	em {
+		font-family: $NHaas;
+	}
+
+	strong {
+		font-family: $NHaas-medium;
+	}
 }

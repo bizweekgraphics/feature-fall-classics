@@ -26,8 +26,32 @@ h1 {
   margin-bottom: 0.1em;
   color: #fff; }
 
+h2 {
+  font-size: 1.5em;
+  line-height: initial;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  margin-bottom: 1rem; }
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    left: 0;
+    border-bottom: 2px solid #3c3c3c;
+    width: 100%; }
+
+h4 {
+  font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #3c3c3c; }
+
 p {
-  margin: 0 auto 1.75em; }
+  margin: 0 auto 1.75em;
+  max-width: 800px;
+  width: 90%; }
 
 em {
   font-family: "TiemposTextWeb-RegularItalic", "Georgia", "Cambria", "Times New Roman", "Times", serif, serif; }
@@ -59,8 +83,11 @@ picture {
 /*------------  Article Layout ------------*/
 section {
   max-width: 800px;
-  width: 90%;
   margin: 0 auto; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .lede {
   position: relative;
@@ -72,11 +99,13 @@ section {
     width: 100%; }
 
 .lede-content {
-  z-index: 1;
+  position: absolute;
+  z-index: 2;
   top: 10%;
   width: 90%;
   max-width: 800px;
-  margin: -300px auto 0; }
+  margin: -300px auto 0;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .lede-title, .credits {
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif; }
@@ -97,15 +126,99 @@ section {
   line-height: initial; }
 
 .dropcap {
-  font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
-  font-size: 5.75em;
-  line-height: 0.9em;
+  font: 5.75em/0.9em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   float: left;
   margin-right: 0.04em; }
 
+.wrapper_images {
+  font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1% 5% 5%;
+  margin: 0 auto 2em; }
+
+.box_text {
+  border: 4px solid #3c3c3c;
+  border-radius: 2em;
+  padding: 1em 0.5em 0;
+  margin: 1em 0 2em; }
+  .box_text h3 {
+    font-size: 1.5rem;
+    display: inline-block; }
+  .box_text p {
+    font-size: 1rem;
+    font-family: "TiemposTextWeb-Regular", "Georgia", "Cambria", "Times New Roman", "Times", serif, serif; }
+
+.box_clothes {
+  margin-bottom: 2em; }
+  .box_clothes::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .box_clothes header {
+    position: relative; }
+    .box_clothes header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 32%;
+      height: 4px;
+      width: 100%;
+      background-color: #3c3c3c;
+      z-index: -1; }
+  .box_clothes h3 {
+    font-size: 1rem;
+    font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+    font-weight: 600;
+    border: 4px solid #3c3c3c;
+    border-radius: 2em;
+    padding: 0.1em 0.5em;
+    position: relative;
+    display: inline-block;
+    background-color: #fff; }
+  .box_clothes p {
+    margin: 0.5em 0;
+    font-size: 0.9rem;
+    line-height: 1.1rem; }
+  .box_clothes:last-of-type {
+    margin-bottom: 0; }
+
+.box_image_left, .box_image_right {
+  width: 48%; }
+
+.box_image_left {
+  float: left; }
+
+.box_image_right {
+  float: right; }
+
+.label {
+  font-size: 0.9rem;
+  font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+  font-weight: 600;
+  border: 4px solid #3c3c3c;
+  border-radius: 2em;
+  padding: 0.2em 0.5em;
+  display: inline-block; }
+
+/*------------  SIDEBAR ------------*/
+.sidebar_clothing_annotation {
+  display: none; }
+  .sidebar_clothing_annotation em {
+    font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif; }
+  .sidebar_clothing_annotation strong {
+    font-family: "NHaasGroteskDSPro-65Md", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif; }
+
 /*-- MEDIA QUERIES -- */
-/* MOBILE */
 /* TABLET */
+/* DESKTOP */
+@media screen and (min-width: 1023px) {
+  .sidebar_clothing_annotation {
+    float: right;
+    width: 150px;
+    font: 0.75em/1.2em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+    margin-right: -200px;
+    margin-top: 49px; } }
 /* RETINA */
 /* Print Styles
  ========================================================================== */

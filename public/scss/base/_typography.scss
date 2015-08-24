@@ -28,10 +28,41 @@ h1 {
     color: $white;
 }
 
+h2 {
+    font-size: 1.5em;
+    line-height: initial;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.1em;
+    margin-bottom: 1rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        left: 0;
+        border-bottom: 2px solid $black;
+        // height: 2px;
+        width: 100%;
+    }
+}
+
+h3 {
+
+
+}
+
+h4 {
+    @include NHaas-bold; 
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $black;
+}
+
 p {
     margin: 0 auto $base-spacing;
-    // max-width: 800px;
-    // width: 60%;
+    max-width: 800px;
+    width: 90%;
     }
 
 em {
