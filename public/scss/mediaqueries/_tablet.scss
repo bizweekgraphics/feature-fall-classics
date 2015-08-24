@@ -1,4 +1,41 @@
 /* TABLET */
-@media screen and (min-width: 560px) and (max-width: 1023px) {
+@media screen and (min-width: 560px) {
+	.wrapper_images {
+		background-color: transparent;
+		padding: 0;
+		width: 90%;
+		// @include clearfix;
 
+		@include align-items(stretch);
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+	}
+
+	.box_text, .box_clothes {
+		// float: left;
+		@include flex(1);
+	}
+
+	.box_text{
+		width: 20%;
+		margin-right: 1em;
+	}
+
+	.box_clothes {
+		padding: 0 1em;
+		width: calc(80%/3);
+		border-left: 4px dashed $black;
+
+		.box_text + & {
+			border-left: none;
+		}
+
+		header {
+
+			&::after {
+				width: 120%;
+			}
+		}
+	}
 }

@@ -32,7 +32,8 @@ h2 {
   position: relative;
   display: inline-block;
   padding-bottom: 0.1em;
-  margin-bottom: 1rem; }
+  margin: 2rem auto 1rem;
+  max-width: 800%; }
   h2::after {
     content: '';
     position: absolute;
@@ -82,12 +83,16 @@ picture {
 /*-- STYLES WE CONTROL -- */
 /*------------  Article Layout ------------*/
 section {
-  max-width: 800px;
   margin: 0 auto; }
   section::after {
     clear: both;
     content: "";
     display: table; }
+
+.section_head {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto; }
 
 .lede {
   position: relative;
@@ -130,7 +135,12 @@ section {
   float: left;
   margin-right: 0.04em; }
 
+.image_full-width {
+  width: 100%;
+  margin: 0 auto 1em; }
+
 .wrapper_images {
+  max-width: 1250px;
   font-family: "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.05);
@@ -211,14 +221,77 @@ section {
 
 /*-- MEDIA QUERIES -- */
 /* TABLET */
+@media screen and (min-width: 560px) {
+  .wrapper_images {
+    background-color: transparent;
+    padding: 0;
+    width: 90%;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: start; }
+
+  .box_text, .box_clothes {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+  .box_text {
+    width: 20%;
+    margin-right: 1em; }
+
+  .box_clothes {
+    padding: 0 1em;
+    width: calc(80%/3);
+    border-left: 4px dashed #3c3c3c; }
+    .box_text + .box_clothes {
+      border-left: none; }
+    .box_clothes header::after {
+      width: 120%; } }
 /* DESKTOP */
 @media screen and (min-width: 1023px) {
   .sidebar_clothing_annotation {
+    display: block;
     float: right;
     width: 150px;
     font: 0.75em/1.2em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
-    margin-right: -200px;
-    margin-top: 49px; } }
+    margin-right: -175px;
+    margin-top: 86px; } }
 /* RETINA */
 /* Print Styles
  ========================================================================== */

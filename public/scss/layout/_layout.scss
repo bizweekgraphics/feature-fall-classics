@@ -6,11 +6,17 @@
 }
 
 section {
-	max-width: 800px;
+	// max-width: 800px;
 	// width: 90%;
 	margin: 0 auto;
 
 	@include clearfix;
+}
+
+.section_head {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .lede {
@@ -68,7 +74,15 @@ section {
 }
 
 
+.image_full-width {
+	width: 100%;
+	margin: 0 auto 1em;
+}
+
+
+
 .wrapper_images {
+	max-width: 1250px;
 	font-family: $NHaas;
 	text-align: center;
 	background-color: rgba(0,0,0, 0.05);
