@@ -24,12 +24,13 @@ h1 {
     font-size: 4rem;
     line-height: 1.1em;
     margin-bottom: 0.1em;
-    color: $quote-color;
+
+    color: $white;
 }
 
 p {
     margin: 0 auto $base-spacing;
-    max-width: 800px;
+    // max-width: 800px;
     // width: 60%;
     }
 

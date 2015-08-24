@@ -4,11 +4,7 @@
 @import "base/base"; /*-- Edit color and typography in _variables.scss & _typography.scss -- */
 
 /*-- STYLES WE CONTROL -- */
-@import "layout/ledes";
-@import "layout/images";
-@import "layout/quotes";
-@import "layout/sidebar";
-@import "layout/embeds";
+@import "layout/layout";
 
 /*-- MEDIA QUERIES -- */
 @import "mediaqueries/mobile";
