@@ -9,8 +9,13 @@ section {
 	// max-width: 800px;
 	// width: 90%;
 	margin: 0 auto;
+	position: relative;
 
 	@include clearfix;
+
+	&:nth-of-type(2n) {
+		background-color: pink;
+	}
 }
 
 .section_head {
@@ -111,21 +116,6 @@ section {
 	@include clearfix;
 	margin-bottom: 2em;
 
-	header {
-		position: relative;
-
-		&::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 32%;
-			height: 4px;
-			width: 100%;
-			background-color: $black;
-			z-index: -1;
-		}
-	}
-
 	h3 {
 		font-size: 1rem;
 		@include NHaas-bold;
@@ -147,16 +137,43 @@ section {
 	}
 }
 
-.box_image_left, .box_image_right {
+.connected header {
+		position: relative;
+		z-index: 100;
+		@include clearfix;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 32%;
+			height: 4px;
+			width: 100%;
+			background-color: $black;
+			z-index: -1;
+		}
+	}
+
+.box_image {
 	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+
+	section:nth-of-type(6) & {
+		width: 24%;
+	}
+
+	section:nth-of-type(10) & {
+		width: 32%;
+	}
 }
 
 .box_image_left {
-	float: left;
+	// float: left;
 }
 
 .box_image_right {
-	float: right;
+	// float: right;
 }
 
 .label {
