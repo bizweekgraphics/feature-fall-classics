@@ -39,10 +39,12 @@ section {
 .lede-content {
 	position: absolute;
 	z-index: 2;
-	top: 10%;
+	bottom: 10%;
+	left: 3%;
+	padding: 5% 2%;
 	width: 90%;
 	max-width: 800px;
-	margin: -300px auto 0;
+	// margin: -300px auto 0;
 	background-color: rgba(0, 0, 0, 0.3);
 }
 

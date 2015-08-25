@@ -1,5 +1,18 @@
 /* TABLET */
 @media screen and (min-width: 560px) {
+	.lede {
+		max-height: 600px;
+	}
+
+	.lede-title {
+		font-size: 3.25rem;
+	}
+
+	.dek {
+		font-size: 1.1em;
+		padding-bottom: 1em;
+	}
+
 	.wrapper_images {
 		background-color: transparent;
 		padding: 0;

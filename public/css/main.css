@@ -109,10 +109,11 @@ section {
 .lede-content {
   position: absolute;
   z-index: 2;
-  top: 10%;
+  bottom: 10%;
+  left: 3%;
+  padding: 5% 2%;
   width: 90%;
   max-width: 800px;
-  margin: -300px auto 0;
   background-color: rgba(0, 0, 0, 0.3); }
 
 .lede-title, .credits {
@@ -231,6 +232,16 @@ section {
 /*-- MEDIA QUERIES -- */
 /* TABLET */
 @media screen and (min-width: 560px) {
+  .lede {
+    max-height: 600px; }
+
+  .lede-title {
+    font-size: 3.25rem; }
+
+  .dek {
+    font-size: 1.1em;
+    padding-bottom: 1em; }
+
   .wrapper_images {
     background-color: transparent;
     padding: 0;
@@ -295,6 +306,9 @@ section {
       border-left: none; } }
 /* DESKTOP */
 @media screen and (min-width: 1023px) {
+  .lede-title {
+    font-size: 4rem; }
+
   .sidebar_clothing_annotation {
     display: block;
     float: right;

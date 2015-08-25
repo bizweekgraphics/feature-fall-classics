@@ -1,4 +1,4 @@
 # feature-fall-classics
 2015 fall classics
 
-Scss is used.
+This is coded mobile first. So layout.scss is all mobile style first.
