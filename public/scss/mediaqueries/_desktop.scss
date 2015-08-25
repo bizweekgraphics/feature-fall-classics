@@ -1,18 +1,91 @@
 /* DESKTOP */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
+
+	section {
+		h2 {
+			font-size: 2.5em;
+		}
+	}
+
+	.intro {
+		height: 100vh;
+		position: relative;
+		border-bottom: 1px solid $white;
+		// color: $black;
+	}
+
+	.lede {
+		height: 100vh;
+		max-height: none;
+		background-size: contain;
+		background-color: rgba(22, 32, 35, 1);	
+		// background-color: rgba(68, 93, 102, 0.5);
+		// background-color: rgba(183, 198, 216, 1);	
+		margin-bottom: 2rem;
+
+
+		+ p {
+			position: absolute;			
+			max-width: 600px;
+
+			bottom: 15%;
+			right: 5%;
+			color: $white;
+			z-index: 3;
+		}
+	}
+
+	.lede-content {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		left: initial;
+		bottom: 50%;
+		right: 5%;
+
+	}
 
 	.lede-title {
 		font-size: 4rem;
 	}
 
-	.sidebar_clothing_annotation {
-		display: block;
-		float: right;
-		width: 150px;
-		font: 0.75em/1.2em $NHaas;
-
-		margin-right: -175px;
-		margin-top: 86px;
+	.section_head {
+		position: relative;
 	}
 
+
+	.wrapper_images {
+		@include flex-direction(row);
+	}
+
+	.box_clothes {
+		padding: 0 1em;
+
+		.box_text + & {
+			border-left: none;
+		}
+	}
+
+	.sidebar_clothing_annotation {
+		opacity: 1;
+		width: 150px;
+		position: absolute;
+		top: 115px;
+		right: -175px;
+	}
+
+}
+
+@media screen and (min-width: 1440px) {
+	.lede + p {
+		bottom: 15%;
+		right: initial;
+		left: 52%;
+	}
+
+	.lede-content {
+		top: 22%;
+		right: initial;
+		left: 50%;
+
+	}
 }
