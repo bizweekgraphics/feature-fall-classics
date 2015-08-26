@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #333;
   font-family: "TiemposTextWeb-Regular", "Georgia", "Cambria", "Times New Roman", "Times", serif, serif;
-  font-size: 1.25em;
+  font-size: 1.125em;
   line-height: 1.75; }
 
 h1,
@@ -35,7 +35,7 @@ section h2 {
   display: inline-block;
   padding-bottom: 0.2em;
   margin: 2rem auto 1rem;
-  max-width: 800%; }
+  max-width: 760px; }
   section h2::after {
     content: '';
     position: absolute;
@@ -54,7 +54,7 @@ h4 {
 
 p {
   margin: 0 auto 1.75em;
-  max-width: 800px;
+  max-width: 760px;
   width: 90%; }
 
 em {
@@ -108,7 +108,7 @@ section {
 
 .section_head {
   width: 90%;
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto; }
 
 .lede {
@@ -125,11 +125,11 @@ section {
 .lede-content {
   position: absolute;
   z-index: 2;
-  bottom: 10%;
+  top: 6%;
   left: 3%;
   padding: 2% 2%;
   width: 90%;
-  max-width: 600px;
+  max-width: 560px;
   background-color: rgba(0, 0, 0, 0.7); }
 
 .lede-title {
@@ -152,7 +152,7 @@ section {
 
 .credits {
   color: #fff;
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: initial; }
 
 .credit_person {
@@ -271,7 +271,6 @@ section {
     z-index: -1; }
 
 .box_image {
-  width: 48%;
   display: inline-block;
   vertical-align: top; }
   section:nth-of-type(6) .box_image {
@@ -291,14 +290,16 @@ section {
 /*------------  SIDEBAR ------------*/
 .sidebar_clothing_annotation {
   display: block;
-  font: 0.75em/1.4em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
-  opacity: 0.65; }
+  font: 0.8em/1.5em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
+  width: 90%;
+  margin: 0 auto; }
   .sidebar_clothing_annotation em, .sidebar_clothing_annotation a {
     font-family: "BWHaasText-56Italic", sans-serif;
     font-weight: normal; }
   .sidebar_clothing_annotation p {
     font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif, sans-serif;
-    font-weight: 600; }
+    font-weight: 600;
+    width: 100%; }
   .sidebar_clothing_annotation a {
     font-weight: 500;
     color: #3c3c3c;
@@ -350,21 +351,21 @@ section {
     font-size: 2.5em; }
 
   .intro {
-    height: 100vh;
+    height: 85vh;
     position: relative;
     border-bottom: 1px solid #fff; }
 
   .lede {
-    height: 100vh;
+    height: 85vh;
     max-height: none;
-    background-size: contain;
+    background-size: 50% auto;
     background-color: #162023;
     margin-bottom: 2rem; }
     .lede + p {
       position: absolute;
-      max-width: 600px;
-      bottom: 15%;
-      right: 5%;
+      max-width: 560px;
+      bottom: 2%;
+      right: 3%;
       color: #fff;
       z-index: 3; }
 
@@ -372,8 +373,8 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: initial;
-    bottom: 50%;
-    right: 5%; }
+    top: 10%;
+    right: 2%; }
 
   .lede-title {
     font-size: 4rem; }
@@ -381,7 +382,7 @@ section {
   .section_head {
     position: relative; }
 
-  .wrapper_images {
+  .clothing_item:nth-of-type(2) .wrapper_images, .clothing_item:nth-of-type(4) .wrapper_images, .clothing_item:nth-of-type(10) .wrapper_images {
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
     box-orient: horizontal;
@@ -399,7 +400,6 @@ section {
       border-left: none; }
 
   .sidebar_clothing_annotation {
-    opacity: 1;
     width: 150px;
     position: absolute;
     top: 115px;

@@ -8,16 +8,17 @@
 	}
 
 	.intro {
-		height: 100vh;
+		height: 85vh;
 		position: relative;
 		border-bottom: 1px solid $white;
 		// color: $black;
 	}
 
 	.lede {
-		height: 100vh;
+		height: 85vh;
 		max-height: none;
-		background-size: contain;
+		// background-size: contain;
+		background-size: 50% auto; 
 		background-color: rgba(22, 32, 35, 1);	
 		// background-color: rgba(68, 93, 102, 0.5);
 		// background-color: rgba(183, 198, 216, 1);	
@@ -26,10 +27,10 @@
 
 		+ p {
 			position: absolute;			
-			max-width: 600px;
+			max-width: 560px;
 
-			bottom: 15%;
-			right: 5%;
+			bottom: 2%;
+			right: 3%;
 			color: $white;
 			z-index: 3;
 		}
@@ -39,9 +40,8 @@
 		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
 		left: initial;
-		bottom: 50%;
-		right: 5%;
-
+		top: 10%;
+		right: 2%;
 	}
 
 	.lede-title {
@@ -54,7 +54,10 @@
 
 
 	.wrapper_images {
-		@include flex-direction(row);
+
+		.clothing_item:nth-of-type(2) &, .clothing_item:nth-of-type(4) &, .clothing_item:nth-of-type(10) & {
+			@include flex-direction(row);
+		}
 	}
 
 	.box_clothes {
@@ -66,7 +69,7 @@
 	}
 
 	.sidebar_clothing_annotation {
-		opacity: 1;
+		// opacity: 1;
 		width: 150px;
 		position: absolute;
 		top: 115px;

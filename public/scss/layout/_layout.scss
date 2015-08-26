@@ -42,7 +42,7 @@ section {
 
 .section_head {
 	width: 90%;
-	max-width: 800px;
+	max-width: $page-width;
 	margin: 0 auto;
 }
 
@@ -63,11 +63,11 @@ section {
 .lede-content {
 	position: absolute;
 	z-index: 2;
-	bottom: 10%;
+	top: 6%;
 	left: 3%;
 	padding: 2% 2%;
 	width: 90%;
-	max-width: 600px;
+	max-width: 560px;
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -96,7 +96,7 @@ section {
 
 .credits {
 	color: $white;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	line-height: initial;
 }
 
@@ -222,7 +222,7 @@ section {
 	}
 
 .box_image {
-	width: 48%;
+	// width: 48%;
 	display: inline-block;
 	vertical-align: top;
 
@@ -246,25 +246,28 @@ section {
 /*------------  SIDEBAR ------------*/
 
 .sidebar_clothing_annotation {
-		display: block;
-		font: 0.75em/1.4em $NHaas;
-		opacity: 0.65;
+	display: block;
+	font: 0.8em/1.5em $NHaas;
+	// opacity: 0.65;
+	width: 90%;
+	margin: 0 auto;
 
-		em, a {
-			// font-family: $tiempos-italic;
-			font-family: $BWHaas-italic;
-			font-weight: normal;
-		}
-
-		p {
-			@include NHaas-bold;
-		}
-
-		a {
-			font-weight: 500;
-			color: $black;
-			text-decoration: none;
-			box-shadow: inset 0 -2px 0 $blue;
-			padding-bottom: 0.15em;
-		}
+	em, a {
+		// font-family: $tiempos-italic;
+		font-family: $BWHaas-italic;
+		font-weight: normal;
 	}
+
+	p {
+		@include NHaas-bold;
+		width: 100%;
+	}
+
+	a {
+		font-weight: 500;
+		color: $black;
+		text-decoration: none;
+		box-shadow: inset 0 -2px 0 $blue;
+		padding-bottom: 0.15em;
+	}
+}
