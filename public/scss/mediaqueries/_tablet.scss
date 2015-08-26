@@ -2,6 +2,14 @@
 @media screen and (min-width: 560px) {
 
 	.clothing_item { 
+		&:nth-of-type(2) {
+			.box_clothes {
+				width: 30%;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
 		&:nth-of-type(4), &:nth-of-type(6) {
 			.box_image {
 				width: 24%;

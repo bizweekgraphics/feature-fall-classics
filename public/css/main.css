@@ -259,14 +259,14 @@ section {
   .box_clothes:last-of-type {
     margin-bottom: 0; }
 
-.connected header {
+.header_bar {
   position: relative;
   z-index: 100; }
-  .connected header::before, .connected header::after {
+  .header_bar::before, .header_bar::after {
     clear: both;
     content: "";
     display: table; }
-  .connected header::after {
+  .header_bar::after {
     content: '';
     position: absolute;
     left: 0;
@@ -318,6 +318,10 @@ section {
 /*-- MEDIA QUERIES -- */
 /* TABLET */
 @media screen and (min-width: 560px) {
+  .clothing_item:nth-of-type(2) .box_clothes {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top; }
   .clothing_item:nth-of-type(4) .box_image, .clothing_item:nth-of-type(6) .box_image {
     width: 24%; }
 
