@@ -3,6 +3,11 @@
 
 	.clothing_item { 
 		&:nth-of-type(2) {
+
+			.wrapper_images {
+				// @include flex-direction(row);
+			}
+
 			.box_clothes {
 				width: 30%;
 				display: inline-block;
@@ -14,6 +19,20 @@
 			.box_image {
 				width: 24%;
 			}
+		}
+
+		&:nth-of-type(5) {
+
+			.box_image {
+				width: 32%;
+			}
+		}
+		
+		&:nth-of-type(7) {
+
+			.wrapper_images > .header_bar h3:nth-of-type(2) {
+			    left: 46.5%;
+		    }
 		}
 	}
 
@@ -33,10 +52,6 @@
 	.dek {
 		font-size: 1.1em;
 		padding-bottom: 1em;
-	}
-
-	.clothing_item:nth-of-type(4) {
-
 	}
 
 	.wrapper_images {
@@ -63,5 +78,16 @@
 
 	.box_clothes {
 		padding: 0 1em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.clothing_item { 
+
+		&:nth-of-type(2) {
+			.box_clothes {
+				width: initial;
+			}
+		}
 	}
 }

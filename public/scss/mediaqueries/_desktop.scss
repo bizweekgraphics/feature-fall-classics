@@ -1,9 +1,47 @@
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
 
-	section {
+	.clothing_item { 
+
 		h2 {
 			font-size: 2.5em;
+		}
+
+		&:nth-of-type(2) {
+			.box_text {
+				width: 50%;
+				max-width: 200px;
+
+				h3 {
+					line-height: initial;
+				}
+			}
+		}
+
+		&:nth-of-type(5) {
+			.box_image {
+				width: calc(96%/6);
+			}
+		}
+	}
+
+	#main {
+		.clothing_item { 
+			&:nth-of-type(4) {
+
+				.wrapper_images {
+					@include flex-direction(column);
+					// background-color: blue;
+				}
+
+				.box_clothes {
+					padding: 0;
+				}
+
+				.box_image {
+					width: calc(96%/8);
+				}
+			}
 		}
 	}
 
@@ -76,6 +114,13 @@
 		right: -175px;
 	}
 
+	.header_section {
+		h3 {
+			font-size: 1.25em;
+			margin-bottom: 1em;
+		}
+	}
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -89,6 +134,13 @@
 		top: 22%;
 		right: initial;
 		left: 50%;
+	}
 
+	.sidebar_clothing_annotation {
+		// opacity: 1;
+		width: 150px;
+		position: absolute;
+		top: 115px;
+		right: -175px;
 	}
 }
