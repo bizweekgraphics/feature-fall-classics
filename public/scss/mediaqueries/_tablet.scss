@@ -1,6 +1,10 @@
 /* TABLET */
 @media screen and (min-width: 560px) {
 
+	section h2 {
+	    font-size: 2.5em;
+	}
+
 	.clothing_item { 
 		&:nth-of-type(2) {
 
@@ -9,9 +13,9 @@
 			}
 
 			.box_clothes {
-				width: 30%;
+				// width: 30%;
 				display: inline-block;
-				vertical-align: top;
+				// vertical-align: top;
 			}
 		}
 

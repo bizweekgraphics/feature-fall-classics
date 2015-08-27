@@ -1,6 +1,44 @@
 
 
 /*------------  Article Layout ------------*/
+
+#main {
+	position: relative;
+}
+
+#header {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-bottom: none;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+#subnav {
+
+	a {
+		font: 0.8em $BWHass-black;
+		// font-weight: 600;
+		display: inline-block;
+		vertical-align: baseline;
+		margin: 0 0.5em;
+		color: $light-gray;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover {
+			color: lighten($blue, 30%);
+		}
+	}
+}
+
+.year-text {
+	background: url('') 0 0 no-repeat;
+	text-indent: -99999px;
+	display: inline-block;
+}
+
+
 .clothing_item {
 	margin: 0 auto;
 	position: relative;
@@ -75,7 +113,6 @@
 	// font-family: $BWHass-black;
 	font-family: $BWCasual;
     font-weight: 600;
-	font-size: 1.75em;
 	text-transform: uppercase;
 }
 
@@ -111,9 +148,9 @@
 
 
 .dropcap {
-	font: 5.75em/0.9em $NHaas;
+	font: 5.75em/0.9em $BWCasual;
 	float: left;
-	margin-right: 0.04em;
+	margin-right: 0.1em;
 }
 
 
@@ -215,10 +252,6 @@
 	
 }
 
-.box_clothes, .box_text {
-
-}
-
 .box_text {
 	@include thick-border;
 	padding: 1em 0.5em 0;
@@ -228,12 +261,11 @@
 		font-size: 1.75rem;
 		font-family: $BWHass-black;
 		display: inline-block;
-		margin: 0;
+		margin: 0 0 0.5em;
 	}
 
 	p {
-		font-size: 1rem;
-		font-family: $tiempos;
+		font: 0.9em/1.5em $tiempos;
 	}
 }
 
@@ -269,6 +301,7 @@
 		text-decoration: none;
 		padding-bottom: 0.15em;
 		box-shadow: inset 0 -2px 0 $blue;
+		color: $black;
 	}
 
 	&:last-of-type {
@@ -302,6 +335,12 @@
 	display: inline-block;
 	vertical-align: top;
 
+	img {
+		// height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
 	.clothing_item:nth-of-type(2) &, .clothing_item:nth-of-type(4) &, .clothing_item:nth-of-type(5) &, .clothing_item:nth-of-type(9) &  {
 		width: 48%;
 	}
@@ -312,6 +351,10 @@
 
 	.clothing_item:nth-of-type(7) &, .clothing_item:nth-of-type(10) & {
 		width: 32%;
+	}
+
+	.clothing_item:nth-of-type(3) &, .clothing_item:nth-of-type(11) & {
+	    width: 70%;
 	}
 }
 
